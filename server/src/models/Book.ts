@@ -24,7 +24,7 @@ Book.init(
 			allowNull: false
 		},
 		ISBN: {
-			type: DataTypes.STRING,
+			type: DataTypes.INTEGER,
 			allowNull: false,
 			unique: true
 		}
