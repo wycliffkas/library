@@ -1,9 +1,7 @@
-import React from "react";
 import { styled } from "@mui/material/styles";
 import InputBase from "@mui/material/InputBase";
-import SearchIcon from "@mui/icons-material/Search";
 
-const Search = styled("div")(({ theme }) => ({
+export const Search = styled("div")(({ theme }) => ({
 	position: "relative",
 	borderRadius: theme.shape.borderRadius,
 	backgroundColor: "#f1f3f4",
@@ -18,7 +16,7 @@ const Search = styled("div")(({ theme }) => ({
 	}
 }));
 
-const SearchIconWrapper = styled("div")(({ theme }) => ({
+export const SearchIconWrapper = styled("div")(({ theme }) => ({
 	padding: theme.spacing(0, 2),
 	height: "100%",
 	position: "absolute",
@@ -28,7 +26,7 @@ const SearchIconWrapper = styled("div")(({ theme }) => ({
 	justifyContent: "center"
 }));
 
-const StyledInputBase = styled(InputBase)(({ theme }) => ({
+export const StyledInputBase = styled(InputBase)(({ theme }) => ({
 	color: "inherit",
 	"& .MuiInputBase-input": {
 		padding: theme.spacing(1, 1, 1, 0),
@@ -40,27 +38,3 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 		}
 	}
 }));
-
-interface SearchInputProps {
-	value: string;
-	onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
-}
-
-const SearchInput: React.FC<SearchInputProps> = ({ value, onChange }) => {
-	return (
-		<Search>
-			<SearchIconWrapper>
-				<SearchIcon />
-			</SearchIconWrapper>
-			<StyledInputBase
-				placeholder="Search..."
-				inputProps={{ "aria-label": "search" }}
-				value={value}
-				onChange={onChange}
-        autoFocus
-			/>
-		</Search>
-	);
-};
-
-export default SearchInput;

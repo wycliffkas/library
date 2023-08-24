@@ -4,7 +4,7 @@ import Dialog from "@mui/material/Dialog";
 import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
 import DialogTitle from "@mui/material/DialogTitle";
-import { NewBook, Book } from "../constants/types";
+import { NewBook, Book } from "../../constants/types";
 
 export interface FormModalProps {
 	open: boolean;

@@ -7,4 +7,6 @@ export default {
 };
 
 export const Default = () => <SearchInput value="" onChange={() => {}} />;
-export const WithValue = () => <SearchInput value="Hello" onChange={() => {}} />;
+export const WithValue = () => (
+	<SearchInput value="Hello" onChange={() => {}} />
+);

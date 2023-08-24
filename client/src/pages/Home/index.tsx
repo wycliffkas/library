@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import "../App.css";
+import "../../App.css";
 import Button from "@mui/material/Button";
 import Pagination from "@mui/material/Pagination";
-import { NewBook, Book } from "../constants/types";
-import FormModal from "../components/FormModal";
-import SearchInput from "../components/SearchInput";
-import Table from "../components/Table";
+import { NewBook, Book } from "../../constants/types";
+import FormModal from "../../components/FormModal";
+import SearchInput from "../../components/SearchInput";
+import Table from "../../components/Table";
 import Box from "@mui/material/Box";
-import { useBooks } from "../hooks/useBooks";
+import { useBooks } from "../../hooks/useBooks";
 
 const Container = styled.div`
 	display: flex;
@@ -29,7 +29,7 @@ function Home() {
 		fetchBooks,
 		searchBooks,
 		addEditBook,
-    deleteSelectedBook,
+		deleteSelectedBook,
 		handlePageChange
 	} = useBooks();
 
