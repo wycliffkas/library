@@ -23,9 +23,5 @@ const tableData: Book[] = [
 ];
 
 export const Default = () => (
-	<Table
-		tableData={tableData}
-		handleDelete={() => {}}
-		handleEdit={() => {}}
-	/>
+	<Table tableData={tableData} handleDelete={() => {}} handleEdit={() => {}} />
 );

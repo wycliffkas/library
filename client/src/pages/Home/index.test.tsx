@@ -1,9 +1,9 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import Home from "./Home";
-import * as useBooksModule from "../hooks/useBooks";
+import Home from "./index";
+import * as useBooksModule from "../../hooks/useBooks";
 
-jest.mock("../hooks/useBooks");
+jest.mock("../../hooks/useBooks");
 
 describe("Home Component", () => {
 	it("renders 'No books available.' when there are no books", () => {
@@ -20,7 +20,7 @@ describe("Home Component", () => {
 			searchBooks: jest.fn(),
 			addEditBook: jest.fn(),
 			deleteBook: jest.fn(),
-      deleteSelectedBook: jest.fn(), 
+			deleteSelectedBook: jest.fn(),
 			handlePageChange: jest.fn()
 		});
 
